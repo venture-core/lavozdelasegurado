@@ -3,13 +3,13 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Boletín La Voz del Asegurado - Maquetación Alternada A4 (4 Páginas)</title>
+  <title>Boletín La Voz del Asegurado - Maquetación Revista A4 (4 Páginas)</title>
   <!-- Tailwind CSS CDN -->
   <script src="https://cdn.tailwindcss.com"></script>
   <!-- Google Fonts: Inter & Montserrat -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="riot.png">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Montserrat:wght@600;700;800;900&display=swap" rel="stylesheet">
   
   <script>
     tailwind.config = {
@@ -20,9 +20,9 @@
             display: ['Montserrat', 'sans-serif'],
           },
           colors: {
-            brandRed: '#a71d2a',      /* Rojo institucional original */
-            brandRedDark: '#7f1d1d',  /* Rojo oscuro tonal */
-            brandBlue: '#1e3a8a',     /* Azul institucional para acentos */
+            brandRed: '#a71d2a',      /* Rojo institucional */
+            brandRedDark: '#7f1d1d',  /* Rojo oscuro */
+            brandBlue: '#1e3a8a',     /* Azul institucional */
             brandGold: '#d97706',     /* Dorado para insignias */
             brandYellow: '#f59e0b',
             paperBg: '#ffffff',
@@ -58,7 +58,7 @@
         height: 297mm !important;
         max-height: 297mm !important;
         margin: 0 !important;
-        padding: 8mm 10mm !important;
+        padding: 7mm 9mm !important;
         box-shadow: none !important;
         border: none !important;
         page-break-after: always;
@@ -81,37 +81,37 @@
       flex-direction: column;
       justify-content: space-between;
       box-sizing: border-box;
-      padding: 8mm 10mm;
+      padding: 7mm 9mm;
       overflow: hidden;
     }
 
-    /* Tipografía Senior */
+    /* Tipografía Senior optimizada para formato Revista */
     .text-senior-body {
-      font-size: 0.98rem;
-      line-height: 1.45;
+      font-size: 0.92rem;
+      line-height: 1.4;
     }
     .text-senior-title {
-      font-size: 2rem;
-      line-height: 1.15;
+      font-size: 1.85rem;
+      line-height: 1.1;
     }
     .text-senior-subtitle {
-      font-size: 1.2rem;
-      line-height: 1.25;
+      font-size: 1.12rem;
+      line-height: 1.2;
     }
   </style>
 </head>
-<body class="bg-slate-400 text-textMain font-sans antialiased min-h-screen py-6 px-2">
+<body class="bg-slate-300 text-textMain font-sans antialiased min-h-screen py-6 px-2">
 
   <!-- Barra de Herramientas (No Imprimible) -->
   <div class="no-print max-w-5xl mx-auto mb-6 bg-slate-900 text-white p-4 rounded-xl shadow-xl flex flex-wrap justify-between items-center gap-4">
     <div class="flex items-center gap-3">
-      <span class="bg-brandRed text-white text-xs font-black px-3 py-1 rounded-full uppercase tracking-wider">Edición A4 Imprimible</span>
+      <span class="bg-brandRed text-white text-xs font-black px-3 py-1 rounded-full uppercase tracking-wider">Edición Revista A4</span>
       <div>
-        <h1 class="text-base md:text-lg font-bold">Boletín "La Voz del Asegurado" — Maquetación Alternada (297mm)</h1>
-        <p class="text-xs text-slate-300">Maquetado en secciones de 3 y 2 columnas con fotografías prominentes y sin cortes de texto.</p>
+        <h1 class="text-base md:text-lg font-bold">Boletín "La Voz del Asegurado" — Maquetación de Alta Densidad</h1>
+        <p class="text-xs text-slate-300">Diseño simétrico, logotipos alineados y distribución fotográfica integrada.</p>
       </div>
     </div>
-    <button onclick="window.print()" class="bg-brandRed hover:bg-red-800 text-white font-black py-2.5 px-6 rounded-lg shadow-lg transition-colors flex items-center gap-2 text-sm">
+    <button onclick="window.print()" class="bg-brandRed hover:bg-red-800 text-white font-black py-2.5 px-6 rounded-lg shadow-lg transition-colors flex items-center gap-2 text-sm cursor-pointer">
       <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 17h2a2 2 0 002-2v-4a2 2 0 00-2-2H5a2 2 0 00-2 2v4a2 2 0 002 2h2m2 4h6a2 2 0 002-2v-4a2 2 0 00-2-2H9a2 2 0 00-2 2v4a2 2 0 002 2zm8-12V5a2 2 0 00-2-2H9a2 2 0 00-2 2v4h10z"></path></svg>
       Imprimir / Exportar a PDF
     </button>
@@ -125,37 +125,52 @@
     <!-- ========================================== -->
     <article class="page-container border-t-8 border-brandRed">
       <div class="flex flex-col h-full justify-between">
-        <div>
-          <!-- Header Institucional Original (Sin deformar logo) -->
-          <header class="flex justify-between items-center border-b-2 border-slate-300 pb-3 mb-3">
-            <div class="flex items-center gap-3">
-              <!-- Badge Insignia Original -->
-              <div class="bg-brandRed text-white font-black text-center px-3 py-2 rounded shadow text-xs leading-tight tracking-wider uppercase flex-shrink-0">
-                100%<br><span class="text-[10px] font-bold text-yellow-300">FUERZA MAYOR</span>
-              </div>
-              <!-- Logotipo Proporcional Preservado -->
-              <div class="flex flex-col">
-                <h1 class="font-display font-black text-2xl md:text-3xl text-brandRed tracking-tight uppercase leading-none">
-                  LA VOZ DEL ASEGURADO
-                </h1>
-                <span class="text-xs text-slate-700 font-bold uppercase tracking-wider mt-1">
-                  Órgano Informativo Sindical e Independiente
-                </span>
+        <div class="flex flex-col h-full justify-between pb-1">
+          
+          <!-- Encabezado con Logotipos Simétricos -->
+          <header class="flex justify-between items-center border-b-2 border-slate-300 pb-2 mb-2 gap-2">
+            <!-- Logo Izquierdo: Fuerza Mayor (Tamaño simétrico e idéntico) -->
+            <div class="w-16 h-16 md:w-20 md:h-20 flex items-center justify-center flex-shrink-0 bg-slate-50 p-1 rounded-lg border border-slate-200 shadow-sm">
+              <img 
+                src="logotipo_Fuerza_mayor.jpeg" 
+                onerror="this.onerror=null; this.src='https://placehold.co/100x100/a71d2a/ffffff?text=Fuerza+Mayor';"
+                alt="Logo 100% Fuerza Mayor" 
+                class="max-h-full max-w-full object-contain"
+              />
+            </div>
+
+            <!-- Sección Central: Título, Descripción y Fecha Centrados -->
+            <div class="flex flex-col items-center text-center px-2 flex-1">
+              <h1 class="font-display font-black text-2xl md:text-3xl text-brandRed tracking-tight uppercase leading-none">
+                LA VOZ DEL ASEGURADO
+              </h1>
+              <span class="text-[11px] text-slate-800 font-extrabold uppercase tracking-wider mt-1">
+                Órgano Informativo Sindical e Independiente
+              </span>
+              <div class="mt-1.5 flex items-center justify-center gap-3 text-xs font-black border-t border-slate-300 pt-1 w-full max-w-sm">
+                <span class="text-brandRed uppercase">Año I • Número 2</span>
+                <span class="text-slate-400">•</span>
+                <span class="text-slate-800">3 de agosto de 2026</span>
               </div>
             </div>
-            <!-- Metadata -->
-            <div class="text-right border-l-2 border-slate-300 pl-4 flex-shrink-0">
-              <span class="block text-xs font-extrabold text-brandRed uppercase">Año I • Número 2</span>
-              <span class="block text-xs font-bold text-slate-800">3 de agosto de 2026</span>
+
+            <!-- Logo Derecho: Asociación Jubilados (Tamaño simétrico e idéntico) -->
+            <div class="w-16 h-16 md:w-20 md:h-20 flex items-center justify-center flex-shrink-0 bg-slate-50 p-1 rounded-lg border border-slate-200 shadow-sm">
+              <img 
+                src="asociaci_jubilados.png" 
+                onerror="this.onerror=null; this.src='https://placehold.co/100x100/1e3a8a/ffffff?text=AMAJUP';"
+                alt="Logo Asociación Multisectorial de Aportantes y Jubilados" 
+                class="max-h-full max-w-full object-contain"
+              />
             </div>
           </header>
 
-          <!-- Titular Principal Banner Full-Width (1 Parte) -->
-          <section class="mb-3 bg-brandRed text-white p-4 rounded-xl shadow-md border-l-8 border-yellow-400">
-            <p class="text-yellow-300 font-bold text-sm md:text-base italic mb-1 tracking-wide">
+          <!-- Titular Principal Banner Full-Width -->
+          <section class="mb-2.5 bg-brandRed text-white p-3 rounded-xl shadow-md border-l-8 border-yellow-400">
+            <p class="text-yellow-300 font-bold text-xs italic mb-0.5 tracking-wide">
               "La jubilación con el 100 % será obra de los propios jubilados."
             </p>
-            <h2 class="text-senior-title font-display font-black text-white uppercase tracking-tight mb-1">
+            <h2 class="text-senior-title font-display font-black text-white uppercase tracking-tight mb-0.5">
               ¿REFORMA O ESTAFA?
             </h2>
             <h3 class="text-senior-subtitle font-semibold text-slate-100">
@@ -163,70 +178,82 @@
             </h3>
           </section>
 
-          <!-- MAQUETACIÓN EN 2 PARTES (Fotografía Prominente + Ancla Informativa) -->
-          <div class="grid grid-cols-12 gap-3 mb-3 items-stretch">
-            <!-- Columna Izquierda: Fotografía Prominente Destacada (7 Cols) -->
-            <div class="col-span-7 relative rounded-xl overflow-hidden shadow-lg border-2 border-slate-300 bg-slate-900 min-h-[220px]">
+          <!-- MAQUETACIÓN EN 2 COLUMNAS PRINCIPALES DE PORTADA -->
+          <div class="grid grid-cols-12 gap-3 mb-2.5 items-stretch flex-1">
+            <!-- Columna Izquierda: Fotografía Prominente Principal (7 Cols) -->
+            <div class="col-span-7 relative rounded-xl overflow-hidden shadow-md border-2 border-slate-300 bg-slate-900 flex flex-col justify-between">
               <img 
                 src="riot.png" 
-                alt="Adultos mayores reunidos en asamblea con firmeza y dignidad" 
+                onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&w=800&q=80';"
+                alt="Trabajadores y jubilados marchando por justicia social" 
                 class="w-full h-full object-cover object-top filter brightness-105"
               />
-              <div class="absolute inset-x-0 bottom-0 bg-gradient-to-t from-slate-950 via-slate-900/80 to-transparent p-3 pt-6 text-white">
+              <div class="absolute inset-x-0 bottom-0 bg-gradient-to-t from-slate-950 via-slate-900/85 to-transparent p-3 pt-6 text-white">
                 <span class="bg-yellow-400 text-slate-950 text-[10px] font-black uppercase px-2 py-0.5 rounded tracking-wider inline-block mb-1">Fotografía Principal</span>
                 <p class="text-xs font-bold text-slate-100 leading-snug">
-                  Trabajadores y jubilados bolivianos firmes en la lucha por un retiro justo y digno.
+                  Trabajadores y jubilados bolivianos movilizados en defensa de sus aportes y por un retiro digno.
                 </p>
               </div>
             </div>
 
-            <!-- Columna Derecha: Tarjeta de Enfoque Social (5 Cols) -->
-            <div class="col-span-5 bg-slate-900 text-white p-4 rounded-xl shadow border-l-4 border-yellow-400 flex flex-col justify-between">
-              <div>
-                <span class="text-yellow-400 font-black text-xs uppercase tracking-wider block mb-1">⚡ Alerta Nacional</span>
-                <h4 class="font-display font-extrabold text-base text-white mb-2 leading-snug">
-                  Análisis crítico sobre las jubilaciones en Bolivia
-                </h4>
-                <p class="text-xs text-slate-200 leading-relaxed font-medium">
-                  Demostramos con datos financieros irrebatibles el perjuicio acumulado contra el fondo de ahorro de los trabajadores.
-                </p>
+            <!-- Columna Derecha: Tarjetas de Enfoque Social (5 Cols) -->
+            <div class="col-span-5 flex flex-col justify-between gap-2">
+              <div class="bg-slate-900 text-white p-3 rounded-xl shadow border-l-4 border-yellow-400 flex-1 flex flex-col justify-between">
+                <div>
+                  <span class="text-yellow-400 font-black text-xs uppercase tracking-wider block mb-1">⚡ Alerta Nacional</span>
+                  <h4 class="font-display font-extrabold text-sm md:text-base text-white mb-1.5 leading-snug">
+                    Análisis crítico sobre las jubilaciones en Bolivia
+                  </h4>
+                  <p class="text-xs text-slate-200 leading-relaxed font-medium">
+                    Demostramos con datos financieros irrebatibles el despojo acumulado contra los fondos de ahorro de las y los trabajadores.
+                  </p>
+                </div>
+                <div class="mt-2 bg-white/10 p-2 rounded-lg border border-white/20">
+                  <span class="text-[10px] text-yellow-300 font-bold block uppercase">Demanda Central</span>
+                  <span class="text-xs font-extrabold text-white">¡Por un sistema solidario y 100% digno!</span>
+                </div>
               </div>
-              <div class="mt-3 bg-white/10 p-2.5 rounded-lg border border-white/20">
-                <span class="text-[11px] text-yellow-300 font-bold block uppercase">Demanda Central</span>
-                <span class="text-xs font-extrabold text-white">¡Por un sistema de reparto verdaderamente solidario y 100% digno!</span>
+
+              <!-- Minicard Informativa -->
+              <div class="bg-amber-100 border-2 border-amber-300 p-2.5 rounded-xl shadow-sm text-slate-900">
+                <span class="text-[10px] font-black uppercase text-amber-900 block tracking-wider">📌 Nota de Redacción</span>
+                <p class="text-xs font-bold leading-tight mt-0.5">
+                  Las reformas parciales no resuelven la pérdida de poder adquisitivo de nuestras familias.
+                </p>
               </div>
             </div>
           </div>
 
-          <!-- MAQUETACIÓN EN 2 PARTES (Dos Propuestas en Debate) -->
-          <section class="bg-amber-50 border-2 border-amber-300 rounded-xl p-3 shadow-sm">
-            <h4 class="font-display font-bold text-base text-brandRed mb-2 flex items-center gap-2">
-              <span class="bg-brandRed text-white text-xs px-2.5 py-0.5 rounded font-black uppercase">Debate</span>
-              Dos propuestas se debaten en la Asamblea Legislativa:
+          <!-- SECCIÓN DEBATE DE LEYES -->
+          <section class="bg-amber-50 border-2 border-amber-300 rounded-xl p-2.5 shadow-sm mb-1">
+            <h4 class="font-display font-bold text-xs text-brandRed mb-1.5 flex items-center gap-2">
+              <span class="bg-brandRed text-white text-[10px] px-2 py-0.5 rounded font-black uppercase">Debate Legislativo</span>
+              Dos propuestas contrapuestas frente a la Asamblea Legislativa:
             </h4>
-            <div class="grid grid-cols-2 gap-3">
+            <div class="grid grid-cols-2 gap-2.5">
               <!-- Opción A -->
-              <div class="bg-white p-3 rounded-lg border-l-4 border-brandRed shadow-sm flex flex-col justify-between">
-                <span class="text-[11px] font-extrabold text-brandRed uppercase block mb-1">Opción A (Actual)</span>
+              <div class="bg-white p-2.5 rounded-lg border-l-4 border-brandRed shadow-sm flex flex-col justify-between">
+                <span class="text-[10px] font-extrabold text-brandRed uppercase block mb-0.5">Opción A (Actual)</span>
                 <p class="font-bold text-slate-900 text-xs leading-snug">
-                  Transformar la seguridad social en un negocio bancario: <span class="text-brandRed uppercase underline font-black">LA GRAN ESTAFA DE LA LEY 065</span>
+                  Perpetuar la capitalización individual como un negocio bancario: <span class="text-brandRed uppercase underline font-black">LA LEY 065</span>
                 </p>
               </div>
               <!-- Opción B -->
-              <div class="bg-white p-3 rounded-lg border-l-4 border-emerald-600 shadow-sm flex flex-col justify-between">
-                <span class="text-[11px] font-extrabold text-emerald-700 uppercase block mb-1">Opción B (Exigencia Social)</span>
+              <div class="bg-white p-2.5 rounded-lg border-l-4 border-emerald-600 shadow-sm flex flex-col justify-between">
+                <span class="text-[10px] font-extrabold text-emerald-700 uppercase block mb-0.5">Opción B (Exigencia Social)</span>
                 <p class="font-bold text-slate-900 text-xs leading-snug">
-                  Anular completamente esa Ley 065 y reponer el derecho de los trabajadores a una jubilación digna.
+                  Anular la Ley 065 y reponer el derecho de los trabajadores a un sistema de reparto solidario e intergeneracional.
                 </p>
               </div>
             </div>
           </section>
+
         </div>
 
         <!-- Pie de página Portada -->
-        <footer class="pt-2 border-t border-slate-300 flex justify-between items-center text-xs text-slate-600 font-semibold">
+        <footer class="pt-1.5 border-t border-slate-300 flex justify-between items-center text-xs text-slate-600 font-semibold">
           <span>Boletín Informativo AMAJUP LP</span>
-          <span class="bg-slate-200 px-3 py-1 rounded-full text-slate-800 font-bold">Página 1 (Portada)</span>
+          <span class="bg-slate-200 px-3 py-0.5 rounded-full text-slate-800 font-bold">Página 1 (Portada)</span>
         </footer>
       </div>
     </article>
@@ -237,109 +264,131 @@
     <!-- ========================================== -->
     <article class="page-container border-t-8 border-brandBlue">
       <div class="flex flex-col h-full justify-between">
-        <div>
+        <div class="flex flex-col h-full justify-between pb-1">
+          
           <!-- Encabezado Interno -->
-          <div class="flex justify-between items-center border-b border-slate-300 pb-2 mb-3">
+          <div class="flex justify-between items-center border-b border-slate-300 pb-1.5 mb-2">
             <span class="font-display font-bold text-slate-600 uppercase text-xs tracking-wider">LA VOZ DEL ASEGURADO • EDITORIAL Y CONCEPTOS CLAVE</span>
             <span class="text-xs font-bold text-brandBlue">Nº 2 — Agosto 2026</span>
           </div>
 
-          <!-- Editorial (1 Parte Banner Ancho) -->
-          <section class="bg-blue-50 border border-blue-300 rounded-xl p-3.5 mb-4 shadow-sm">
-            <div class="flex items-center gap-2 mb-1.5">
-              <span class="bg-brandBlue text-white text-xs font-extrabold uppercase px-3 py-0.5 rounded">Editorial</span>
-              <h2 class="text-lg font-display font-bold text-brandBlue">Análisis Técnico y Riguroso</h2>
+          <!-- Editorial Banner -->
+          <section class="bg-blue-50 border border-blue-300 rounded-xl p-3 mb-2.5 shadow-sm">
+            <div class="flex items-center gap-2 mb-1">
+              <span class="bg-brandBlue text-white text-[10px] font-extrabold uppercase px-2.5 py-0.5 rounded">Editorial</span>
+              <h2 class="text-base md:text-lg font-display font-bold text-brandBlue">Análisis Técnico y Riguroso sobre Nuestra Realidad</h2>
             </div>
             <p class="text-senior-body text-slate-900 font-medium leading-relaxed">
-              Este boletín, en su segundo número, marca una diferencia sustancial respecto al análisis superficial e irracional con el que suele abordarse la Ley de Pensiones. Nuestra propuesta es técnica y contundente: demostramos con datos en mano que la Ley 065 constituye un despojo sistemático al ahorro de las trabajadoras y trabajadores bolivianos. estafa que se basa en el siguiente análisis de la realidad:
+              Este boletín, en su segundo número, marca una diferencia sustancial respecto al análisis superficial con el que suele abordarse la Ley de Pensiones. Nuestra propuesta es técnica y contundente: demostramos con datos numéricos en mano que la Ley 065 constituye un despojo sistemático al ahorro de las trabajadoras y trabajadores bolivianos. Un debate serio exige dominar la diferencia entre tres conceptos fundamentales:
             </p>
           </section>
 
           <!-- Titular Central -->
-          <div class="text-center mb-3">
+          <div class="text-center mb-2">
             <h2 class="text-senior-subtitle font-display font-black text-slate-900 uppercase tracking-tight">
-              Seguridad Social, Seguro Social y Ahorro Individual en Bolivia
+              Seguridad Social, Seguro Social y Ahorro Individual
             </h2>
           </div>
 
-          <!-- MAQUETACIÓN EN 3 PARTES (3 COLUMNAS INTERCALADAS) -->
-          <section class="grid grid-cols-3 gap-3 mb-4">
+          <!-- MAQUETACIÓN EN 3 COLUMNAS INTERCALADAS (TRES CONCEPTOS) -->
+          <section class="grid grid-cols-3 gap-2.5 mb-2.5">
             <!-- Columna 1: Seguridad Social -->
-            <div class="bg-white border-2 border-blue-200 rounded-xl p-3 shadow-sm flex flex-col justify-between">
+            <div class="bg-white border-2 border-blue-200 rounded-xl p-2.5 shadow-sm flex flex-col justify-between">
               <div>
-                <div class="bg-blue-100 text-brandBlue p-2 rounded-lg text-center font-extrabold text-2xl mb-2">
+                <div class="bg-blue-100 text-brandBlue p-1.5 rounded-lg text-center font-extrabold text-xl mb-1.5">
                   🛡️
                 </div>
-                <h3 class="text-sm font-display font-bold text-brandBlue mb-1.5 text-center">1. ¿Qué es Seguridad Social?</h3>
-                <p class="text-xs text-slate-800 leading-relaxed font-medium">
-                  Es un derecho humano y una responsabilidad del Estado. Busca proteger a todas las personas frente a riesgos como vejez, enfermedad, invalidez, desempleo y muerte. Se basa en los principios de solidaridad, universalidad e integralidad. No depende de cuánto aportes, sino de que todos estemos cubiertos.
+                <h3 class="text-xs md:text-sm font-display font-bold text-brandBlue mb-1 text-center">1. Seguridad Social</h3>
+                <p class="text-[11px] text-slate-800 leading-relaxed font-medium">
+                  Es un derecho humano y responsabilidad del Estado. Protege universalmente a todas las personas frente a vejez, enfermedad, invalidez y desempleo. No depende de cuánto aportes individualmente, sino de la cobertura universal de la población.
                 </p>
               </div>
-              <div class="mt-2 bg-blue-50 p-1.5 rounded text-[10px] font-bold text-brandBlue text-center border border-blue-200 uppercase">
+              <div class="mt-2 bg-blue-50 p-1 rounded text-[9px] font-bold text-brandBlue text-center border border-blue-200 uppercase">
                 Derecho Humano Universal
               </div>
             </div>
 
             <!-- Columna 2: Seguro Social -->
-            <div class="bg-white border-2 border-emerald-300 rounded-xl p-3 shadow-sm flex flex-col justify-between">
+            <div class="bg-white border-2 border-emerald-300 rounded-xl p-2.5 shadow-sm flex flex-col justify-between">
               <div>
-                <div class="bg-emerald-100 text-emerald-800 p-2 rounded-lg text-center font-extrabold text-2xl mb-2">
+                <div class="bg-emerald-100 text-emerald-800 p-1.5 rounded-lg text-center font-extrabold text-xl mb-1.5">
                   🤝
                 </div>
-                <h3 class="text-sm font-display font-bold text-emerald-900 mb-1.5 text-center">2. ¿Qué es Seguro Social?</h3>
-                <p class="text-xs text-slate-800 leading-relaxed font-medium mb-2">
-                  Es uno de los pilares de la seguridad social. Funciona con aportes obligatorios de trabajadores, empleadores y Estado. Se basa en la solidaridad intergeneracional: los que trabajan hoy sostienen a los jubilados de hoy. El beneficio no es proporcional 100% a lo que ahorraste.
+                <h3 class="text-xs md:text-sm font-display font-bold text-emerald-900 mb-1 text-center">2. Seguro Social</h3>
+                <p class="text-[11px] text-slate-800 leading-relaxed font-medium mb-1">
+                  Pilar basado en aportes obligatorios tripartitos (trabajador, empleador y Estado). Funciona mediante solidaridad intergeneracional: los aportes activos financian a los jubilados actuales.
                 </p>
-                <p class="text-[11px] text-slate-900 font-medium bg-emerald-50 p-1.5 rounded border border-emerald-200 leading-snug">
-                  En Bolivia este esquema se plasmó en el antiguo sistema de reparto y ahora se debate con propuestas como el Proyecto de Ley 280 y la propuesta del Sistema de Reparto que busca volver a la solidaridad y evitar que todo dependa del saldo individual.
+                <p class="text-[10px] text-slate-900 font-semibold bg-emerald-50 p-1 rounded border border-emerald-200 leading-snug">
+                  Estructura el sistema de reparto solidario para evitar que el retiro dependa de la suerte del mercado.
                 </p>
               </div>
-              <div class="mt-2 bg-emerald-100 p-1.5 rounded text-[10px] font-bold text-emerald-900 text-center border border-emerald-300 uppercase">
-                Solidaridad e Reparto
+              <div class="mt-2 bg-emerald-100 p-1 rounded text-[9px] font-bold text-emerald-900 text-center border border-emerald-300 uppercase">
+                Reparto Solidario
               </div>
             </div>
 
             <!-- Columna 3: Ahorro Individual -->
-            <div class="bg-white border-2 border-rose-300 rounded-xl p-3 shadow-sm flex flex-col justify-between">
+            <div class="bg-white border-2 border-rose-300 rounded-xl p-2.5 shadow-sm flex flex-col justify-between">
               <div>
-                <div class="bg-rose-100 text-brandRed p-2 rounded-lg text-center font-extrabold text-2xl mb-2">
+                <div class="bg-rose-100 text-brandRed p-1.5 rounded-lg text-center font-extrabold text-xl mb-1.5">
                   💰
                 </div>
-                <h3 class="text-sm font-display font-bold text-brandRed mb-1.5 text-center">3. ¿Qué es Ahorro Individual?</h3>
-                <p class="text-xs text-slate-800 leading-relaxed font-medium">
-                  Es lo que establece la Ley 065 de Pensiones vigente. Cada trabajador aporta a su Cuenta Personal Previsional. Tu pensión depende únicamente de cuánto ahorraste + rentabilidad. No hay solidaridad: si aportaste poco, tu jubilación será baja. La Pensión Solidaria como complemento.
+                <h3 class="text-xs md:text-sm font-display font-bold text-brandRed mb-1 text-center">3. Ahorro Individual</h3>
+                <p class="text-[11px] text-slate-800 leading-relaxed font-medium">
+                  Es el esquema privatizador de la Ley 065. Cada trabajador guarda dinero en su Cuenta Personal Previsional. Si tus salarios fueron bajos o con periodos de desempleo, la pensión resultante será miserable. No existe solidaridad real.
                 </p>
               </div>
-              <div class="mt-2 bg-rose-50 p-1.5 rounded text-[10px] font-bold text-brandRed text-center border border-rose-200 uppercase">
-                Ley 065 Vigente
+              <div class="mt-2 bg-rose-50 p-1 rounded text-[9px] font-bold text-brandRed text-center border border-rose-200 uppercase">
+                Modelo Ley 065
               </div>
             </div>
           </section>
 
-          <!-- Resumen de Conclusión (1 Parte Full-Width) -->
-          <section class="bg-slate-900 text-white p-3.5 rounded-xl shadow-md border-t-4 border-yellow-400">
-            <h4 class="font-display font-bold text-xs text-yellow-400 mb-1 uppercase tracking-wider">En resumen:</h4>
-            <div class="grid grid-cols-3 gap-2 text-xs font-medium mb-2">
+          <!-- SECCIÓN FOTOGRÁFICA INTERMEDIA CON ADULTOS MAYORES -->
+          <section class="mb-2 bg-slate-900 rounded-xl overflow-hidden shadow border border-slate-300 grid grid-cols-12 items-center">
+            <div class="col-span-5 h-32 md:h-36 relative">
+              <img 
+                src="adultos_mayores.png" 
+                onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1581579438747-1dc8d1e292c7?auto=format&fit=crop&w=800&q=80';"
+                alt="Pareja de adultos mayores asesorándose con dignidad" 
+                class="w-full h-full object-cover"
+              />
+            </div>
+            <div class="col-span-7 p-3 text-white">
+              <span class="bg-yellow-400 text-slate-950 font-black text-[9px] uppercase px-2 py-0.5 rounded tracking-wider inline-block mb-1">
+                Atención Humana y Justa
+              </span>
+              <h4 class="font-display font-extrabold text-xs md:text-sm text-yellow-300 leading-snug mb-1">
+                Nuestros mayores merecen orientación clara y derechos garantizados
+              </h4>
+              <p class="text-[11px] text-slate-200 leading-relaxed">
+                Cada trabajador invierte décadas de esfuerzo contribuyendo al desarrollo del país. Las pensiones no son una dádiva ni un favor gubernamental; son el fruto del trabajo invertido a lo largo de toda una vida.
+              </p>
+            </div>
+          </section>
+
+          <!-- Resumen de Conclusión -->
+          <section class="bg-slate-800 text-white p-2.5 rounded-xl shadow border-t-4 border-yellow-400">
+            <h4 class="font-display font-bold text-[11px] text-yellow-400 mb-1 uppercase tracking-wider">En síntesis:</h4>
+            <div class="grid grid-cols-3 gap-2 text-[10px] font-medium mb-1">
               <div class="bg-white/10 p-1.5 rounded border border-white/10">
-                <strong class="text-yellow-300 block">• Seguridad Social:</strong> El paraguas de protección del Estado.
+                <strong class="text-yellow-300 block">• Seguridad Social:</strong> Garantía pública universal.
               </div>
               <div class="bg-white/10 p-1.5 rounded border border-white/10">
-                <strong class="text-yellow-300 block">• Seguro Social:</strong> Reparto y solidaridad entre todos.
+                <strong class="text-yellow-300 block">• Seguro Social:</strong> Fondo colectivo e intergeneracional.
               </div>
               <div class="bg-white/10 p-1.5 rounded border border-white/10">
-                <strong class="text-yellow-300 block">• Ahorro Individual:</strong> Cada uno con lo suyo, como en la Ley 065.
+                <strong class="text-yellow-300 block">• Ahorro Individual:</strong> Saldo individual vulnerable al mercado.
               </div>
             </div>
-            <p class="text-slate-300 text-[11px] italic leading-snug border-t border-slate-700 pt-1.5">
-              El debate actual en Bolivia gira en que la 065 dejó a muchos con pensiones bajas, por eso surgen el PL 280 y otras propuestas de reparto para volver a la lógica de seguro social.
-            </p>
           </section>
+
         </div>
 
         <!-- Pie de página -->
-        <footer class="pt-2 border-t border-slate-300 flex justify-between items-center text-xs text-slate-600 font-semibold">
+        <footer class="pt-1.5 border-t border-slate-300 flex justify-between items-center text-xs text-slate-600 font-semibold">
           <span>Boletín Informativo AMAJUP LP</span>
-          <span class="bg-slate-200 px-3 py-1 rounded-full text-slate-800 font-bold">Página 2</span>
+          <span class="bg-slate-200 px-3 py-0.5 rounded-full text-slate-800 font-bold">Página 2</span>
         </footer>
       </div>
     </article>
@@ -350,157 +399,169 @@
     <!-- ========================================== -->
     <article class="page-container border-t-8 border-brandRed">
       <div class="flex flex-col h-full justify-between">
-        <div>
+        <div class="flex flex-col h-full justify-between pb-1">
+          
           <!-- Encabezado Interno -->
-          <div class="flex justify-between items-center border-b border-slate-300 pb-2 mb-2">
+          <div class="flex justify-between items-center border-b border-slate-300 pb-1.5 mb-2">
             <span class="font-display font-bold text-slate-600 uppercase text-xs tracking-wider">LA VOZ DEL ASEGURADO • ANÁLISIS MATEMÁTICO FINANCIERO</span>
             <span class="text-xs font-bold text-brandRed">Nº 2 — Agosto 2026</span>
           </div>
 
           <!-- SECCIÓN 1: DEMOSTRACIÓN MATEMÁTICA -->
           <section class="mb-2">
-            <h2 class="text-base font-display font-extrabold text-slate-900 mb-1 border-l-4 border-brandRed pl-2">
+            <h2 class="text-sm md:text-base font-display font-extrabold text-slate-900 mb-1 border-l-4 border-brandRed pl-2">
               1. ¿Cuánto aportamos realmente los trabajadores?
             </h2>
-            <p class="text-xs text-slate-900 mb-2 font-medium">
-              Actualmente, el aporte que recibe La Gestora Pública de la Renta de Vejez se compone de la siguiente manera:
+            <p class="text-xs text-slate-900 mb-1.5 font-medium">
+              Actualmente, el aporte acumulado que recibe La Gestora Pública de la Renta de Vejez se desglosa así:
             </p>
 
-            <!-- MAQUETACIÓN EN 2 PARTES (Tarjetas de Aporte) -->
-            <div class="grid grid-cols-2 gap-2 mb-2">
+            <!-- Tarjetas de Aporte Laboral y Patronal -->
+            <div class="grid grid-cols-2 gap-2 mb-1.5">
               <div class="bg-white p-2 rounded-lg border-l-4 border-blue-700 shadow-sm border border-slate-200">
-                <span class="text-[11px] text-slate-700 font-bold block">Aporte laboral:</span>
-                <span class="text-xl font-black text-slate-900">12.71%</span>
+                <span class="text-[10px] text-slate-700 font-bold block uppercase">Aporte laboral directo:</span>
+                <span class="text-lg font-black text-slate-900">12.71%</span>
               </div>
               <div class="bg-white p-2 rounded-lg border-l-4 border-amber-600 shadow-sm border border-slate-200">
-                <span class="text-[11px] text-slate-700 font-bold block">Aporte patronal:</span>
-                <span class="text-xl font-black text-slate-900">5.71%</span>
-                <span class="block text-[10px] text-slate-600 italic">*(en términos reales, también sale del esfuerzo del trabajador).</span>
+                <span class="text-[10px] text-slate-700 font-bold block uppercase">Aporte patronal computable:</span>
+                <span class="text-lg font-black text-slate-900">5.71%</span>
+                <span class="block text-[9px] text-slate-600 italic">(En términos económicos reales, proviene del trabajo).</span>
               </div>
             </div>
 
             <div class="bg-brandRed text-white p-2 rounded-lg font-semibold text-xs text-center shadow-sm mb-2">
-              En total, se genera un aporte mensual real del <strong class="text-yellow-300 text-sm font-black">18.42%</strong>.<br>
-              Si tomamos como ejemplo un salario promedio de Bs 4.000, el aporte mensual asciende a <strong>Bs 736,80</strong>, lo que equivale a un total acumulado de <strong class="underline decoration-yellow-300 font-bold">Bs 8.841,60 al año</strong>.
+              Aporte mensual real global: <strong class="text-yellow-300 text-sm font-black">18.42%</strong>.<br>
+              Para un haber de Bs 4.000, el aporte es <strong>Bs 736,80/mes</strong> (<strong class="underline decoration-yellow-300 font-bold">Bs 8.841,60 al año</strong>).
             </div>
 
-            <!-- TABLA CUADRO 1 (Destacada con Fuente Oficial) -->
+            <!-- TABLA CUADRO 1 (Gestora Pública) -->
             <div class="mb-2 bg-white rounded-lg border-2 border-slate-400 overflow-hidden shadow-sm">
-              <div class="bg-brandRed text-white font-display font-black text-center py-1 px-2 text-[11px] uppercase tracking-wider">
+              <div class="bg-brandRed text-white font-display font-black text-center py-1 px-2 text-[10px] uppercase tracking-wider">
                 CUADRO 1: CONTRIBUCIONES AL SIP POR TIPO DE ASEGURADO Y EMPLEADOR
               </div>
-              <table class="w-full text-left text-[11px] border-collapse">
+              <table class="w-full text-left text-[10px] border-collapse">
                 <thead>
                   <tr class="bg-slate-200 text-slate-900 font-bold border-b border-slate-400">
-                    <th class="p-1.5 border-r border-slate-300">CONCEPTO</th>
-                    <th class="p-1.5 text-center border-r border-slate-300 leading-tight">APORTE ASEGURADO/A DEPENDIENTE</th>
-                    <th class="p-1.5 text-center border-r border-slate-300 leading-tight">APORTE PATRONAL DEPENDIENTE</th>
-                    <th class="p-1.5 text-center leading-tight">APORTE ASEGURADO/A INDEPENDIENTE</th>
+                    <th class="p-1 border-r border-slate-300">CONCEPTO</th>
+                    <th class="p-1 text-center border-r border-slate-300 leading-tight">APORTE DEPENDIENTE</th>
+                    <th class="p-1 text-center border-r border-slate-300 leading-tight">APORTE PATRONAL</th>
+                    <th class="p-1 text-center leading-tight">APORTE INDEPENDIENTE</th>
                   </tr>
                 </thead>
                 <tbody class="divide-y divide-slate-300 text-slate-900 font-medium">
                   <tr>
                     <td class="p-1 border-r border-slate-300">Cotización Mensual</td>
                     <td class="p-1 text-center border-r border-slate-300 font-bold">10,00%</td>
-                    <td class="p-1 text-center border-r border-slate-300"></td>
+                    <td class="p-1 text-center border-r border-slate-300">--</td>
                     <td class="p-1 text-center font-bold">10,00%</td>
                   </tr>
                   <tr class="bg-slate-50">
                     <td class="p-1 border-r border-slate-300">Prima por Riesgo Común</td>
                     <td class="p-1 text-center border-r border-slate-300 font-bold">1,71%</td>
-                    <td class="p-1 text-center border-r border-slate-300"></td>
+                    <td class="p-1 text-center border-r border-slate-300">--</td>
                     <td class="p-1 text-center font-bold">1,71%</td>
                   </tr>
                   <tr>
                     <td class="p-1 border-r border-slate-300">Prima por Riesgo Laboral</td>
-                    <td class="p-1 text-center border-r border-slate-300"></td>
-                    <td class="p-1 text-center border-r border-slate-300"></td>
+                    <td class="p-1 text-center border-r border-slate-300">--</td>
+                    <td class="p-1 text-center border-r border-slate-300">--</td>
                     <td class="p-1 text-center font-bold">1,71%</td>
                   </tr>
                   <tr class="bg-slate-50">
                     <td class="p-1 border-r border-slate-300">Aporte solidario del asegurado/a</td>
                     <td class="p-1 text-center border-r border-slate-300 font-bold">0,50%</td>
-                    <td class="p-1 text-center border-r border-slate-300"></td>
+                    <td class="p-1 text-center border-r border-slate-300">--</td>
                     <td class="p-1 text-center font-bold">0,50%</td>
                   </tr>
                   <tr>
                     <td class="p-1 border-r border-slate-300">Comisión por Administración</td>
-                    <td class="p-1 text-center border-r border-slate-300 font-bold">0.50%</td>
-                    <td class="p-1 text-center border-r border-slate-300"></td>
+                    <td class="p-1 text-center border-r border-slate-300 font-bold">0,50%</td>
+                    <td class="p-1 text-center border-r border-slate-300">--</td>
                     <td class="p-1 text-center font-bold">0,50%</td>
                   </tr>
                   <tr class="bg-slate-50">
                     <td class="p-1 border-r border-slate-300">Aporte Patronal Solidario</td>
-                    <td class="p-1 text-center border-r border-slate-300"></td>
+                    <td class="p-1 text-center border-r border-slate-300">--</td>
                     <td class="p-1 text-center border-r border-slate-300 font-bold">3,50%</td>
-                    <td class="p-1 text-center"></td>
+                    <td class="p-1 text-center">--</td>
                   </tr>
                   <tr>
-                    <td class="p-1 border-r border-slate-300">Prima por Riegos Profesional</td>
-                    <td class="p-1 text-center border-r border-slate-300"></td>
+                    <td class="p-1 border-r border-slate-300">Prima por Riesgo Profesional</td>
+                    <td class="p-1 text-center border-r border-slate-300">--</td>
                     <td class="p-1 text-center border-r border-slate-300 font-bold">1,71%</td>
-                    <td class="p-1 text-center"></td>
+                    <td class="p-1 text-center">--</td>
                   </tr>
                   <tr class="bg-slate-900 text-white font-black text-xs">
-                    <td class="p-1.5 border-r border-slate-700">Total</td>
-                    <td class="p-1.5 text-center border-r border-slate-700 text-yellow-400">12.71%</td>
-                    <td class="p-1.5 text-center border-r border-slate-700 text-yellow-400">5,21%</td>
-                    <td class="p-1.5 text-center text-yellow-400">14,42%</td>
+                    <td class="p-1 border-r border-slate-700">Total Acumulado</td>
+                    <td class="p-1 text-center border-r border-slate-700 text-yellow-400">12,71%</td>
+                    <td class="p-1 text-center border-r border-slate-700 text-yellow-400">5,21%</td>
+                    <td class="p-1 text-center text-yellow-400">14,42%</td>
                   </tr>
                 </tbody>
               </table>
-              <div class="text-[10px] font-bold text-slate-900 bg-amber-200 p-1 text-right border-t border-amber-300">
-                Fuente y elaboración: Gestora Pública de la Seguridad Social de Largo Plazo
+              <div class="text-[9px] font-bold text-slate-800 bg-amber-200 p-0.5 text-right border-t border-amber-300 px-2">
+                Fuente: Cuadro oficial publicatorio Gestora Pública de la Seguridad Social de Largo Plazo
               </div>
             </div>
 
-            <!-- MAQUETACIÓN EN 2 PARTES (Comparación DPF vs Gestora) -->
-            <div class="space-y-2 text-xs text-slate-900">
-              <h3 class="font-display font-bold text-slate-900 border-l-4 border-brandRed pl-2">
-                2. La prueba del engaño: La matemática no miente
-              </h3>
-              <p class="leading-tight font-medium text-[11px]">
-                La Real Academia Española define la "estafa" como la acción de quien, con ánimo de lucro, utiliza un engaño suficiente para producir error en otro. Como el Sistema Integral de Pensiones funciona bajo la lógica de un "ahorro de capitalización individual", comparemos lo que hace La Gestora con lo que rendiría ese mismo dinero en el sistema financiero tradicional:
-              </p>
-
-              <div class="grid grid-cols-2 gap-2">
-                <!-- Columna DPF -->
-                <div class="bg-emerald-50 border border-emerald-400 p-2 rounded text-[11px] font-medium text-emerald-950">
-                  <span class="font-sans font-bold text-emerald-900 block mb-1 border-b border-emerald-300 pb-0.5">
-                    🏦 Depósito a Plazo Fijo (DPF 9.2% anual):
-                  </span>
-                  <p class="mb-1"><strong>Año 1:</strong> Capital de Bs 8.841,60 + interés (9.2%) = <strong>Bs 9.655,03</strong></p>
-                  <p><strong>Año 2:</strong> Nuevo aporte (Bs 8.841,60) + Capital acumulado (Bs 9.655,03) = Bs 18.496,63 + Interés (9.2%) = <strong class="text-emerald-800">Bs 20.198,32</strong></p>
-                </div>
-
-                <!-- Columna Gestora -->
-                <div class="bg-rose-50 border border-rose-300 p-2 rounded text-[11px] font-medium text-slate-900">
-                  <span class="font-sans font-bold text-brandRed block mb-1 border-b border-rose-200 pb-0.5">
-                    📉 Gestora / Ley 065 (4.50% anual):
-                  </span>
-                  <p class="mb-0.5">A. Solo capitaliza el 10% (Bs 400/mes) = Bs 4.800 al año.</p>
-                  <p class="mb-0.5">B. Rendimiento promedio deficiente: ~4.50% anual.</p>
-                  <p class="mb-0.5">C. Año 1: Capital Bs 4.800 + Interés (4.5%) = <strong>Bs 5.016</strong></p>
-                  <p>D. Año 2: Nuevo aporte + Acumulado = Bs 9.816 + Interés (4.5%) = <strong class="text-brandRed">Bs 10.257,72</strong></p>
-                </div>
+            <!-- FOTO INTEGRADA DE LA GESTORA PÚBLICA -->
+            <div class="mb-2 bg-slate-900 rounded-lg overflow-hidden border border-slate-300 flex items-center shadow-sm">
+              <div class="w-1/3 h-24 relative flex-shrink-0">
+                <img 
+                  src="gestora.png" 
+                  onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1556742049-0a67ef0e8548?auto=format&fit=crop&w=800&q=80';"
+                  alt="Atención de asegurados en oficinas de la Gestora" 
+                  class="w-full h-full object-cover"
+                />
               </div>
-
-              <!-- Conclusión en Banner Ancho (1 Parte) -->
-              <div class="bg-brandRed text-white p-2 rounded-lg text-[11px] leading-snug">
-                <strong class="text-yellow-300 uppercase block font-bold mb-0.5">Conclusión de la denuncia:</strong>
-                Con la Ley 065 -incluso si es modificada superficialmente en la Asamblea- el trabajador pierde más de la mitad del capital e intereses que podría generar en un instrumento financiero básico. Mientras el costo de vida sube, el rendimiento que la Gestora le otorga al trabajador ni siquiera cubre la inflación real.
-                <p class="font-bold text-yellow-300 uppercase mt-0.5">
-                  Mantener la capitalización individual bajo estas reglas no es previsión social; es un despojo institucionalizado.
+              <div class="p-2 text-white w-2/3">
+                <span class="text-yellow-400 font-black text-[9px] uppercase block">Atención al Asegurado</span>
+                <p class="text-[10px] text-slate-100 font-semibold leading-tight mt-0.5">
+                  Largas filas y trámites complejos: miles de asegurados acuden diariamente a las oficinas de La Gestora a la espera de rendimientos que no compensan la inflación real.
                 </p>
               </div>
             </div>
+
+            <!-- SECCIÓN COMPARATIVA MATEMÁTICA DPF vs GESTORA -->
+            <div class="space-y-1.5 text-xs text-slate-900">
+              <h3 class="font-display font-bold text-slate-900 border-l-4 border-brandRed pl-2 text-xs">
+                2. La matemática no miente: DPF vs Gestora
+              </h3>
+
+              <div class="grid grid-cols-2 gap-2">
+                <!-- Columna DPF -->
+                <div class="bg-emerald-50 border border-emerald-400 p-2 rounded text-[10px] font-medium text-emerald-950">
+                  <span class="font-sans font-bold text-emerald-900 block mb-0.5 border-b border-emerald-300 pb-0.5 uppercase">
+                    🏦 Depósito a Plazo Fijo (9.2% anual):
+                  </span>
+                  <p class="mb-0.5"><strong>Año 1:</strong> Capital Bs 8.841,60 + Interés = <strong>Bs 9.655,03</strong></p>
+                  <p><strong>Año 2:</strong> Nuevo aporte + Acumulado = Bs 18.496,63 + Interés = <strong class="text-emerald-800">Bs 20.198,32</strong></p>
+                </div>
+
+                <!-- Columna Gestora -->
+                <div class="bg-rose-50 border border-rose-300 p-2 rounded text-[10px] font-medium text-slate-900">
+                  <span class="font-sans font-bold text-brandRed block mb-0.5 border-b border-rose-200 pb-0.5 uppercase">
+                    📉 Gestora / Ley 065 (4.50% anual):
+                  </span>
+                  <p class="mb-0.5">Solo capitaliza el 10% (Bs 4.800/año) a bajo rendimiento.</p>
+                  <p><strong>Año 2 acumulado:</strong> <strong class="text-brandRed">Bs 10.257,72</strong> (perdiendo más de la mitad del capital social rendible).</p>
+                </div>
+              </div>
+
+              <!-- Conclusión en Banner Ancho -->
+              <div class="bg-brandRed text-white p-2 rounded-lg text-[10px] leading-snug shadow-sm">
+                <strong class="text-yellow-300 uppercase block font-bold mb-0.5">Conclusión de la Denuncia:</strong>
+                Con la Ley 065 el trabajador pierde más del 50% de la capacidad de capitalización de sus recursos. Mantener esta lógica no es previsión social, es un despojo sistemático.
+              </div>
+            </div>
           </section>
+
         </div>
 
         <!-- Pie de página -->
-        <footer class="pt-2 border-t border-slate-300 flex justify-between items-center text-xs text-slate-600 font-semibold">
+        <footer class="pt-1.5 border-t border-slate-300 flex justify-between items-center text-xs text-slate-600 font-semibold">
           <span>Boletín Informativo AMAJUP LP</span>
-          <span class="bg-slate-200 px-3 py-1 rounded-full text-slate-800 font-bold">Página 3</span>
+          <span class="bg-slate-200 px-3 py-0.5 rounded-full text-slate-800 font-bold">Página 3</span>
         </footer>
       </div>
     </article>
@@ -511,29 +572,30 @@
     <!-- ========================================== -->
     <article class="page-container border-t-8 border-slate-900 bg-slate-50">
       <div class="flex flex-col h-full justify-between">
-        <div>
+        <div class="flex flex-col h-full justify-between pb-1">
+          
           <!-- CONVOCATORIA URGENTE DESTACADA -->
-          <section class="bg-brandRed text-white p-4 rounded-2xl shadow-lg mb-3 border-4 border-yellow-400">
+          <section class="bg-brandRed text-white p-3.5 rounded-2xl shadow-lg mb-2.5 border-4 border-yellow-400">
             <div class="text-center mb-2">
-              <span class="bg-yellow-400 text-slate-950 font-black text-xs uppercase px-3 py-0.5 rounded-full tracking-wider inline-block mb-1">
-                ¡CONVOCATORIA URGENTE!
+              <span class="bg-yellow-400 text-slate-950 font-black text-[10px] uppercase px-3 py-0.5 rounded-full tracking-wider inline-block mb-1">
+                ¡CONVOCATORIA URGENTE Y OBLIGATORIA!
               </span>
               <h2 class="text-senior-title font-display font-black text-yellow-300 uppercase tracking-tight">
-                REUNIÓN AMPLIADA
+                REUNIÓN AMPLIADA DE LA PAZ
               </h2>
               <p class="text-xs font-black text-white uppercase tracking-wider">
-                JUCHA DE JUBILADOS POR JUSTICIA
+                ASOCIACIÓN MULTISECTORIAL DE APORTANTES Y JUBILADOS (AMAJUP LP)
               </p>
             </div>
 
-            <p class="text-xs text-slate-100 mb-2 text-justify leading-relaxed bg-black/20 p-2.5 rounded-lg border border-white/20 font-medium">
-              La Asociación Multisectorial de Aportantes y Jubilados en el Sistema de Pensiones de La Paz, <strong>AMAJUP LP.</strong> CONVOCA a la reunión ampliada que se realizará el 12 de agosto de 2026, en el Auditorio Nicolás Fernández Naranjo de la Biblioteca Municipal, final Prado, a horas 9:00 a.m.
+            <p class="text-xs text-slate-100 mb-2 text-justify leading-relaxed bg-black/25 p-2 rounded-lg border border-white/20 font-medium">
+              La Asociación Multisectorial de Aportantes y Jubilados en el Sistema de Pensiones de La Paz (<strong>AMAJUP LP</strong>) CONVOCA a todos los trabajadores activos, aportantes y jubilados a la gran reunión ampliada para tratar el futuro de nuestros fondos de retiro.
             </p>
 
-            <!-- MAQUETACIÓN EN 3 PARTES (Fecha, Hora, Lugar) -->
+            <!-- DATOS LOGÍSTICOS (3 COLUMNAS) -->
             <div class="grid grid-cols-3 gap-2 mb-2 text-xs">
               <div class="bg-white/10 p-2 rounded-lg border border-white/20 flex items-center gap-2">
-                <span class="text-xl">📅</span>
+                <span class="text-lg">📅</span>
                 <div>
                   <span class="text-[9px] text-yellow-300 uppercase font-black block">FECHA</span>
                   <span class="font-extrabold text-white text-[10px]">MIÉRCOLES 12 DE AGOSTO DE 2026</span>
@@ -541,64 +603,63 @@
               </div>
 
               <div class="bg-white/10 p-2 rounded-lg border border-white/20 flex items-center gap-2">
-                <span class="text-xl">⏰</span>
+                <span class="text-lg">⏰</span>
                 <div>
                   <span class="text-[9px] text-yellow-300 uppercase font-black block">HORA</span>
-                  <span class="font-extrabold text-white text-[11px]">9:00 A.M.</span>
+                  <span class="font-extrabold text-white text-[11px]">09:00 A.M.</span>
                 </div>
               </div>
 
               <div class="bg-white/10 p-2 rounded-lg border border-white/20 flex items-center gap-2">
-                <span class="text-xl">📍</span>
+                <span class="text-lg">📍</span>
                 <div>
                   <span class="text-[9px] text-yellow-300 uppercase font-black block">LUGAR</span>
-                  <span class="font-extrabold text-white text-[10px]">AUDITORIO NICOLÁS FERNÁNDEZ NARANJO</span>
+                  <span class="font-extrabold text-white text-[10px]">AUDITORIO N. FERNÁNDEZ NARANJO (BIBLIOTECA MUNICIPAL)</span>
                 </div>
               </div>
             </div>
 
             <!-- Temas de Análisis -->
-            <div class="bg-black/30 p-2.5 rounded-lg border border-yellow-400/30">
-              <h3 class="text-yellow-300 font-bold text-xs uppercase mb-1">TEMAS: LEY DE PENSIONES</h3>
-              <p class="text-[11px] font-semibold text-slate-200 mb-1">Se analizará principalmente:</p>
-              <ul class="space-y-1 text-xs text-slate-100">
-                <li class="flex items-center gap-2">
+            <div class="bg-black/30 p-2 rounded-lg border border-yellow-400/30">
+              <h3 class="text-yellow-300 font-bold text-xs uppercase mb-0.5">ORDEN DEL DÍA Y TEMAS DE DEBATE:</h3>
+              <ul class="space-y-0.5 text-[11px] text-slate-100">
+                <li class="flex items-center gap-1.5">
                   <span class="text-yellow-400 font-bold">•</span>
                   <span>Conclusiones del Ampliado Nacional de la CONALJUP.</span>
                 </li>
-                <li class="flex items-center gap-2">
+                <li class="flex items-center gap-1.5">
                   <span class="text-yellow-400 font-bold">•</span>
-                  <span>Proyectos de Ley de Pensiones presentados a la Asamblea Legislativa.</span>
+                  <span>Evaluación de Proyectos de Ley de Pensiones presentados a la Asamblea Legislativa.</span>
                 </li>
               </ul>
-              <p class="text-right text-xs italic text-yellow-200 mt-1 font-medium">Se agradece su puntual y gentil asistencia.</p>
+              <p class="text-right text-[10px] italic text-yellow-200 mt-1 font-medium">Se encarece puntual asistencia.</p>
             </div>
           </section>
 
-          <!-- SECCIÓN CONTRAPORTADA: REDES SOCIALES FOTO PROMINENTE -->
-          <!-- MAQUETACIÓN EN 2 PARTES (Fotografía Destacada + QR & Redes) -->
-          <section class="bg-white p-3 rounded-2xl shadow-sm border border-slate-300">
-            <h2 class="text-center text-sm md:text-base font-display font-black text-brandRed mb-2">
-              ¡SÍGUENOS EN NUESTRAS REDES SOCIALES Y MANTENTE INFORMADO!
+          <!-- SECCIÓN CONTRAPORTADA: REDES SOCIALES Y FOTOGRAFÍA -->
+          <section class="bg-white p-3 rounded-2xl shadow-sm border border-slate-300 flex-1 flex flex-col justify-between">
+            <h2 class="text-center text-xs md:text-sm font-display font-black text-brandRed mb-1.5 uppercase tracking-wide">
+              ¡MANTENTE INFORMADO Y SÍGUENOS EN NUESTRAS REDES SOCIALES!
             </h2>
 
-            <div class="grid grid-cols-12 gap-3 items-center">
-              <!-- Fotografía Prominente Senior Couple (7 Cols) -->
-              <div class="col-span-7 rounded-xl overflow-hidden shadow-md border-2 border-slate-300 bg-slate-100">
+            <div class="grid grid-cols-12 gap-3 items-center my-auto">
+              <!-- Fotografía Complementaria de Contraportada (7 Cols) -->
+              <div class="col-span-7 rounded-xl overflow-hidden shadow border-2 border-slate-300 bg-slate-100">
                 <img 
                   src="imagen_contra_portada.png" 
-                  alt="Pareja de adultos mayores aprendiendo juntos a manejar sus rentas e ingresos" 
-                  class="w-full h-36 object-cover"
+                  onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1516321318423-f06f85e504b3?auto=format&fit=crop&w=800&q=80';"
+                  alt="Adultos mayores integrados y organizados" 
+                  class="w-full h-32 md:h-36 object-cover"
                 />
-                <div class="p-1.5 bg-slate-900 text-white text-[10px] text-center font-bold">
-                  Pareja de adultos mayores aprendiendo a manejar sus rentas e ingresos.
+                <div class="p-1 bg-slate-900 text-white text-[9px] text-center font-bold">
+                  Unidos y organizados por el respeto a los aportes de toda una vida.
                 </div>
               </div>
 
-              <!-- QR Code & Iconos Sociales (5 Cols) -->
-              <div class="col-span-5 flex flex-col items-center text-center">
+              <!-- Código QR y Canales Digitales (5 Cols) -->
+              <div class="col-span-5 flex flex-col items-center text-center justify-center">
                 <div class="bg-slate-100 p-2 rounded-xl border-2 border-slate-300 mb-1 shadow-inner">
-                  <svg class="w-20 h-20 text-slate-900" viewBox="0 0 100 100" fill="currentColor">
+                  <svg class="w-16 h-16 text-slate-900" viewBox="0 0 100 100" fill="currentColor">
                     <rect x="0" y="0" width="30" height="30"/>
                     <rect x="5" y="5" width="20" height="20" fill="white"/>
                     <rect x="10" y="10" width="10" height="10"/>
@@ -613,33 +674,36 @@
                     <rect x="75" y="75" width="15" height="15"/>
                   </svg>
                 </div>
-                <p class="text-[10px] font-black text-slate-800 leading-tight mb-2">
-                  Escanea aquí con tu celular para unirte a nuestro grupo de información
+                <p class="text-[9px] font-black text-slate-800 leading-tight mb-1.5">
+                  Escanea el código QR para unirte a la comunidad oficial en WhatsApp
                 </p>
 
                 <!-- Iconos de Redes Sociales -->
-                <div class="flex items-center gap-2">
-                  <span class="w-7 h-7 rounded-full bg-blue-700 text-white flex items-center justify-center font-bold text-xs shadow">f</span>
-                  <span class="w-7 h-7 rounded-full bg-emerald-600 text-white flex items-center justify-center font-bold text-[10px] shadow">WA</span>
-                  <span class="w-7 h-7 rounded-full bg-red-600 text-white flex items-center justify-center font-bold text-[10px] shadow">YT</span>
-                  <span class="w-7 h-7 rounded-full bg-slate-900 text-white flex items-center justify-center font-bold text-[10px] shadow">TK</span>
+                <div class="flex items-center gap-1.5 justify-center">
+                  <span class="w-6 h-6 rounded-full bg-blue-700 text-white flex items-center justify-center font-bold text-[10px] shadow">f</span>
+                  <span class="w-6 h-6 rounded-full bg-emerald-600 text-white flex items-center justify-center font-bold text-[9px] shadow">WA</span>
+                  <span class="w-6 h-6 rounded-full bg-red-600 text-white flex items-center justify-center font-bold text-[9px] shadow">YT</span>
+                  <span class="w-6 h-6 rounded-full bg-slate-900 text-white flex items-center justify-center font-bold text-[9px] shadow">TK</span>
                 </div>
               </div>
             </div>
           </section>
+
+          <!-- FIRMA OFICIAL DE LA DIRECTIVA -->
+          <div class="mt-2 pt-1.5 border-t-2 border-slate-300 text-center">
+            <p class="text-xs font-bold text-slate-800">La Paz, 28 de julio de 2026.</p>
+            <p class="text-xs md:text-sm font-display font-black text-brandRed uppercase tracking-widest mt-0.5">
+              LA DIRECTIVA DE AMAJUP LP.
+            </p>
+          </div>
+
         </div>
 
-        <!-- FIRMA OFICIAL (Pie de Contraportada) -->
-        <div class="mt-2 pt-2 border-t-2 border-slate-300 text-center">
-          <p class="text-xs font-bold text-slate-800">La Paz, 28 de julio de 2026.</p>
-          <p class="text-sm font-display font-black text-brandRed uppercase tracking-widest mt-0.5">
-            LA DIRECTIVA DE AMAJUP LP.
-          </p>
-          <div class="flex justify-between items-center text-xs text-slate-600 font-semibold mt-2">
-            <span>Boletín Informativo AMAJUP LP</span>
-            <span class="bg-slate-200 px-3 py-1 rounded-full text-slate-800 font-bold">Página 4 (Contraportada)</span>
-          </div>
-        </div>
+        <!-- Pie de página Contraportada -->
+        <footer class="pt-1 border-t border-slate-300 flex justify-between items-center text-xs text-slate-600 font-semibold">
+          <span>Boletín Informativo AMAJUP LP</span>
+          <span class="bg-slate-200 px-3 py-0.5 rounded-full text-slate-800 font-bold">Página 4 (Contraportada)</span>
+        </footer>
       </div>
     </article>
 
